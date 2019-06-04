@@ -1,0 +1,5 @@
+input_list_path: "/root/domain_names.lst"
+input_list_machine_factor: 500
+hetzner_cloud_api_key: <YOUR_HETZNER_API_KEY>
+cloud_init_path: "cloud-init"
+hetzner_cloud_ssh_key_ids: <YOUR_HETZNER_WORKSPACE_PUBLIC_SSH_KEY_NAME>

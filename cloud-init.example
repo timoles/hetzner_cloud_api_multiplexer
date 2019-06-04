@@ -1,0 +1,14 @@
+#cloud-config
+
+packages:
+ - python3
+ - nmap
+
+runcmd:
+ - [ wget, "http://<host_ip>/<part_id>", -O, /root/parts.lst ]
+ - "mkdir /root/results"
+ - "nmap -v > /root/results/<part_id>.txt"
+
+phone_home:
+ url: http://<host_ip>/<part_id>
+ POST: [ pub_key_dsa, pub_key_rsa, pub_key_ecdsa, instance_id ]
