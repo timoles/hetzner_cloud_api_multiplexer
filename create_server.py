@@ -191,7 +191,8 @@ if __name__ == "__main__":
 
 			response = client.servers.create(name=part_id, server_type=ServerType("cx11"), image=Image(name="ubuntu-18.04"), user_data=user_data_part, ssh_keys=[client.ssh_keys.get_by_name("tmp")])
 			servers.append(response.server) 
-
+		
+		for server in servers:
 			print(server.public_net.ipv4.ip)
 		
 	except KeyboardInterrupt:
