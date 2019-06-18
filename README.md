@@ -18,6 +18,8 @@ Deploy everything on an internet reachable system!
 
 * Only usable on an www reachable host (Port 80)
 
+* Install the python hcloud from Hetzner
+
 * Fill out the config.yaml
 
 * With the cloud-init you are able to execute commands during the droplet creation (e.g. install dependencies and then run a nmap scan). When the cloud-init commands are all completed the cloud-init makes a POST request with some Metadata to the URL given in the config. After this request the Tools knows that the commands are completed and results are saved in the result folder (TODO exact location). The server is then trying to download the files with scp and afterwards destroys the droplet.
